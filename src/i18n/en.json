@@ -1,0 +1,19 @@
+{
+    "hero":{
+        "home":"Home",
+        "fullname":"Maria Papadaki",
+        "greeting":"Hello",
+        "intro":"My name is Maria Papadaki",
+        "welcome":"Welcome to my online portfolio",
+        "promptCom":"Want to connect?",
+        "contact":"Contact",
+        "about":"About",
+        "projects":"Projects"
+    },
+    "about":{
+        "title":"About me. . .",
+        "me":"I am a graduate in Computer Science, with more than 3 years of professional experience and a master's degree in Informatics Engineering. Through my career and personal projects, I have work on several technologies and took up challenges throughout a project's lifecycle.",
+        "years":"Over the next five years I would like to grow into a well-rounded developer, with a strong technical foundation and experience in a variety of fun projects. I would also like to get my hands on new technologies and approaches for improving user experience.",
+        "interview":"From our discussion, I appreaciated the approach and technologies presented, as well as the team's overall feeling. I also liked the appreciation the team has for creative solutions and design."
+    }
+}

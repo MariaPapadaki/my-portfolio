@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-title{
+    color: white;
+    background-color: transparent;
+    padding: 1%;
+}
+.text-sub{
+    background-color: #74355d;
+    background-color: transparent;
+    padding: 1%;
+}
+
+.bg-main{
+    background-color:  #8b5e9b;
+}
+.bg-second{
+    background-color:  #400c4e;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.aboutitem {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.aboutitem.show {
+    opacity: 1;
+    transform: translateY(0);
+}

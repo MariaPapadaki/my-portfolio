@@ -1,0 +1,41 @@
+---
+
+import { useTranslation } from "../i18n/translate";
+const {lang = "en"} = Astro.props;
+const switchLang = lang === "en" ? "el" : "en";
+const tr = useTranslation(lang);
+---
+
+<header class="sticky top-0 z-50 bg-white border-b bg-second text-white">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    
+    <!-- <span class="text-xl font-bold text-indigo-600">
+      {tr.hero.fullname}
+    </span> -->
+    <a href={`/${lang}`} class="flex items-center">
+      <img src="/cake2.png" alt="Special logo" class="h-8 w-auto object-contain"/>
+      <span class="text-xs font-bold text-pink-300/50 ml-4">
+        a.k.a SpaceCake
+      </span>
+    </a>
+
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href={`/${lang}`} class="hover:text-yellow-400">{tr.hero.home}</a>
+      <a href="#about" class="hover:text-yellow-400">{tr.hero.about}</a>
+      <a href="#projects" class="hover:text-yellow-400">{tr.hero.projects}</a>
+      <a href="#contact" class="hover:text-yellow-400">{tr.hero.contact}</a>
+    </nav>
+
+    <div class="text-sm font-medium flex items-center gap-2">
+      <a
+        href="/en" class={lang === "en" ? "text-yellow-500 font-bold" : "hover:text-yellow-500"}>
+        EN
+      </a>
+      <span>|</span>
+      <a
+        href="/el" class={lang === "el" ? "text-yellow-500 font-bold" : "hover:text-yellow-500"}>
+        EL
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Projects from "../../components/react/Projects";
+import Form from "../../components/react/Form";
+
+import "../../styles/global.css";
+import { getLanguage, useTranslation } from "../../i18n/translate";
+
+const lang = getLanguage(Astro.url);
+const tr = useTranslation(lang);
+---
+
+<BaseLayout title={tr.hero.title} separator=" | " fullname={tr.hero.fullname} lang={lang}>
+	<!--Hero section -->
+	<section class="relative overflow-hidden bg-main bg-gradient-to-br min-h-[600px] flex items-center px-8 -mt-8 mb-10">
+		
+		<div class="absolute -top-32 -left-32 w-96 h-96 bg-pink-500/30 rounded-full blur-3xl"></div>
+  		<div class="absolute top-40 -right-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
+
+		<div class="relative max-w-7xl mx-auto w-full">
+			<div class="grid md:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
+				<div class="text-white">
+					<h1 class="text-5xl md:text-6xl font-bold leading-tight mb-1">
+						{tr.hero.greeting}!<br/>
+						<span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+						{tr.hero.intro}</span>
+					</h1>
+					<h3 class="text-3xl md:text-2xl mb-4">{tr.hero.welcome}</h3>
+					<div class="flex gap-4 flex-wrap">
+						<a href="#contact" class="hover:bg-slate-900 text-white px-8 py-3.5 rounded-lg font-semibold transition-all hover:-translate-y-0.5 ">
+						{tr.hero.promptCom}
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-center md:justify-end">
+					<img class="rounded-2xl w-72 h-72 md:w-96 md:h-96 object-cover shadow-2xl ring-4 ring-white/30 hover:-translate-y-2 transition-transform duration-300" 
+					src="/profpic.jpg" alt="profile image"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--About me -->
+	<section class="bg-slate-50 py-16 px-8 -mx-8" id="about">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid md:grid-cols-2 gap-16 items-start">
+
+				<div>
+					<h2 class="text-4xl md:text-5xl font-bold mb-10 text-slate-800">{tr.about.title}</h2>
+				</div>
+				<div class="relative pl-8 border-l-2 border-indigo-200 space-y-12">
+					<p class="aboutitem text-lg leading-relaxed text-slate-600">
+						{tr.about.me}
+					</p>
+					<p class="aboutitem text-lg leading-relaxed text-slate-600">
+						{tr.about.years}
+					</p>
+					<p class="aboutitem text-lg leading-relaxed text-slate-600">
+						{tr.about.interview}
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 px-8" id="projects">
+		<div class="max-w-7xl mx-auto">
+			<Projects lang={lang} client:load/>
+		</div>
+	</section>
+
+	<section class="bg-slate-50 py-16 px-8 -mx-8" id="contact">
+		<div class="max-w-7xl mx-auto">
+			<Form client:idle/>
+		</div>
+	</section>
+</BaseLayout>
+
+<script>
+	const itemList = document.querySelectorAll(".aboutitem");
+
+	const observer = new IntersectionObserver((items) => {
+		items.forEach((item)=>{
+			if(item.isIntersecting){
+				item.target.classList.add("show");
+			}
+		});
+	})
+	itemList.forEach((item) => observer.observe(item));
+</script>

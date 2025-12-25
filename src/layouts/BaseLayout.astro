@@ -1,0 +1,33 @@
+---
+//css
+import "../styles/global.css";
+//components
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const {lang = "en"} = Astro.props;
+const { 
+  title = "Portofolio",
+  separator =" ",
+  fullname = "Firstname Lastname"
+ } = Astro.props;
+---
+
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio site" />
+  <meta name="fullname" content={fullname} />
+  <title>{title }{separator }{fullname}</title>
+
+</head>
+
+<body class="bg-main text-gray-900 m-0 p-0 min-h-screen flex flex-col">
+  <Header lang={lang}/>
+  <main class="flex-1">
+    <slot/>
+  </main>
+  <Footer class=""/>
+</body>
+</html>

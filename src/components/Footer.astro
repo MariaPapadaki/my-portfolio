@@ -1,0 +1,26 @@
+---
+//css
+import "../styles/global.css";
+//components
+import External from "./External.astro";
+---
+
+<footer class="text-white bg-second mt-8 mb-4">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+            <small class="text-sm opacity-80">
+                Copyright &copy; <span id="cpr"></span> | All rights reserved
+            </small>
+            <nav class="flex flex-row items-center gap-6 whitespace-nowrap text-sm font-medium px-6">
+                <External url = "https://www.linkedin.com/in/maria-papadaki-89a541187/" nameOfLink = "LinkedIn"/>.
+                <External url = "https://github.com/MariaPapadaki" nameOfLink = "Github"/>.
+                <External url = "https://the-space-cake.itch.io/" nameOfLink = "Itchio"/>.
+                <External url = "https://www.instagram.com/blinkedink/" nameOfLink = "Instagram"/>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelector("#cpr")!.textContent = new Date().getFullYear().toString();
+</script>

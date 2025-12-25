@@ -36,3 +36,24 @@ img{
     opacity: 1;
     transform: translateY(0);
 }
+
+.card{
+    height: auto;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+html, body{
+    overflow-x: hidden;
+}

@@ -97,7 +97,7 @@ export default function Projects({lang}) {
       <div className="relative flex items-center justify-center">
         
         {/* ghost card 1 */}
-        <div onClick={prevPR} className="hidden md:block w-64 h-[420px] bg-sky-950/40 hover:bg-sky-950/50 transition rounded-xlscale-90 opacity-60"/>
+        <div onClick={prevPR} className="hidden md:block w-64 h-[420px] bg-sky-950/20 hover:bg-sky-950/50 transition rounded-xlscale-90 opacity-60"/>
 
         <div className="z-10 ">
           <Card project={list[index]}/>

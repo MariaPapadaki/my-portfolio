@@ -1,11 +1,11 @@
 # My Portfolio
 
 ## Prerequisites
-## 1.Make sure you have **Node.js (v18+)** installed.  
-## 2.Clone the Repository : git clone https://github.com/MariaPapadaki/my-portfolio.git
-## 3.Navigate to the folder : cd my-portfolio
-## 4.Install dependencies : npm install
-## 5.Start the dev server : npm run dev
+ 1.Make sure you have **Node.js (v18+)** installed.  
+ 2.Clone the Repository : git clone https://github.com/MariaPapadaki/my-portfolio.git
+ 3.Navigate to the folder : cd my-portfolio
+ 4.Install dependencies : npm install
+ 5.Start the dev server : npm run dev
 
 # Astro Starter Kit: Minimal
 

@@ -11,8 +11,8 @@ export function Card({project}){
 
   return (
     <>
-    <div className="border-2 border-dashed h-100 bg-sky-900 max-w-sm rounded overflow-hidden shadow-lg flex flex-col card">
-      <img className="w-full h-56 object-contain" src={`/imgs/${imgName}`} alt={imgDesc}/>
+    <div className="h-100 max-w-sm rounded overflow-hidden shadow-lg flex flex-col card">
+      <img className="w-full h-56 object-contain p-6" src={`/imgs/${imgName}`} alt={imgDesc}/>
       <div className="px-6 py-4 h-40">
         <div className="font-bold text-xl mb-2 text-white">{projectName}</div>
         <p className="text-gray-300 text-base">

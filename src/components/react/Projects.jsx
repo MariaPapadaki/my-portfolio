@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Card } from "./Card";
 
+import ElectricBorder from "../ElectricBorder";
+
+
 export default function Projects({lang}) {
   const projects = {
     en:[
@@ -97,14 +100,24 @@ export default function Projects({lang}) {
       <div className="relative flex items-center justify-center">
         
         {/* ghost card 1 */}
-        <div onClick={prevPR} className="hidden md:block w-64 h-[420px] bg-sky-950/20 hover:bg-sky-950/50 transition rounded-xlscale-90 opacity-60"/>
+        <div onClick={prevPR} className="hidden md:block w-64 h-[420px] bg-sky-800/80 hover:bg-sky-800/50 transition rounded-xlscale-90 opacity-60"/>
 
-        <div className="z-10 ">
-          <Card project={list[index]}/>
-        </div>
+        <ElectricBorder 
+          client:only="react"
+          color="#75aee4"
+          background="#12055e"
+          speed={0.9}
+          chaos={0.04}
+          thickness={4}
+          style={{ borderRadius: 20 }}
+        >
+          <div className="z-10 ">
+            <Card project={list[index]}/>
+          </div>
+        </ElectricBorder>
 
         {/* ghost card 2 */}
-        <div onClick={nextPR} className="hidden md:block w-64 h-[420px] bg-sky-950/20 hover:bg-sky-950/50 transition rounded-xlscale-90 opacity-60"/>
+        <div onClick={nextPR} className="hidden md:block w-64 h-[420px] bg-sky-800/80 hover:bg-sky-800/50 transition rounded-xlscale-90 opacity-60"/>
 
         {/* buttons */}
         <div className="absolute inset-y-0 left-2 flex items-center md:left-[-3rem]">

@@ -7,4 +7,11 @@ export default defineConfig({
     react(),
     tailwind(), // ✅ Astro-managed Tailwind ONLY
   ],
+  vite: {
+    resolve: {
+      alias: {
+        '@': new URL('./src/', import.meta.url).pathname,
+      },
+    },
+  },
 });

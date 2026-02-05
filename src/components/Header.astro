@@ -21,9 +21,10 @@ const tr = useTranslation(lang);
 
     <nav class="hidden md:flex gap-6 text-sm font-medium">
       <a href={`/${lang}`} class="hover:text-yellow-400">{tr.hero.home}</a>
-      <a href="#about" class="hover:text-yellow-400">{tr.hero.about}</a>
-      <a href="#projects" class="hover:text-yellow-400">{tr.hero.projects}</a>
-      <a href="#contact" class="hover:text-yellow-400">{tr.hero.contact}</a>
+      <a href={`/${lang}#about`}"#about" class="hover:text-yellow-400">{tr.hero.about}</a>
+      <a href={`/${lang}#projects`} class="hover:text-yellow-400">{tr.hero.projects}</a>
+      <a href={`/${lang}#contact`} class="hover:text-yellow-400">{tr.hero.contact}</a>
+      <a href={`/${lang}/gallery`} class="hover:text-yellow-400">{tr.hero.gallery}</a>
     </nav>
 
     <div class="text-sm font-medium flex items-center gap-2">

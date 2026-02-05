@@ -27,7 +27,7 @@ const tr = useTranslation(lang);
     <div class="absolute inset-0 z-0 bg-[#0a0a0a]">
       <Particles
         client:only="react"
-        particleColors={["#ffffff", "#6366f1"]}
+        particleColors={["#ffffff", "#6366f1", "#FFECA3","#FFA3FA"]}
         particleCount={400}
         particleSpread={15}
         speed={0.15}
@@ -114,9 +114,24 @@ const tr = useTranslation(lang);
     sparkRadius={70}
     sparkCount={10}
     duration={500}
-  >
+  > 
     <section class="py-16 px-8" id="projects">
-      <div class="max-w-7xl mx-auto">
+      <div class="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <Particles
+          client:only="react"
+          particleColors={["#ffffff", "#6366f1", "#FFECA3","#FFA3FA"]}
+          particleCount={400}
+          particleSpread={15}
+          speed={0.15}
+          particleBaseSize={150}
+          moveParticlesOnHover={true}
+          alphaParticles={true}
+          disableRotation={false}
+          pixelRatio={1}
+          className="h-full w-full"
+        />
+    </div>
+      <div class="max-w-7xl mx-auto z-10">
         <Projects lang={lang} client:load />
       </div>
     </section>

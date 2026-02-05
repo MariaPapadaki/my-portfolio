@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "./Card";
 
-import ElectricBorder from "../ElectricBorder";
+import ElectricBorder from "../react/bits/ElectricBorder";
 
 
 export default function Projects({lang}) {

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import CircularGallery from "../../components/react/bits/CircularGallery.jsx";
+
+import "../../styles/global.css";
+import { getLanguage, useTranslation } from "../../i18n/translate";
+
+const lang = getLanguage(Astro.url);
+const tr = useTranslation(lang);
+
+const art = [
+      { image: "/imgs/art/escapee.png", text: 'Escape' },
+      { image: "/imgs/art/paris-signed.png", text: 'Paris' },
+      { image: "/imgs/art/wendigo.png", text: 'Wendigo' },
+      { image: "/imgs/art/foodie.png", text: 'Midnight snack' },
+    ];
+---
+
+<BaseLayout
+  title={tr.hero.title}
+  separator=" | "
+  fullname={tr.hero.fullname}
+  lang={lang}
+>
+  <!--Hero section -->
+    <section
+        class="relative min-h-[700px] flex items-center px-8 -mt-8 mb-10 pt-10 overflow-hidden"
+    >
+        <div class="max-w-7xl mx-auto w-full h-[50vh] md:h-[70vh] lg:h-[80vh] min-h-[400px]">
+          <CircularGallery items={art} bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
+          bend={-1}
+          borderRadius={0.06}
+          scrollSpeed={1.5}
+          scrollEase={0.14}
+          client:only="react"
+          />
+        </div>
+    </section>
+
+</BaseLayout>
+
+<!-- <script>
+  const itemList = document.querySelectorAll(".aboutitem");
+
+  const observer = new IntersectionObserver((items) => {
+    items.forEach((item) => {
+      if (item.isIntersecting) {
+        item.target.classList.add("show");
+      }
+    });
+  });
+  itemList.forEach((item) => observer.observe(item));
+</script> -->
